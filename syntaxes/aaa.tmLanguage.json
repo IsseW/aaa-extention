@@ -1,0 +1,114 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "aaa",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#constant"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#entity"
+		},
+		{
+			"include": "#meta"
+		},
+		{
+			"include": "#paren-expression"
+		},
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"paren-expression": {
+			"begin": "Á",
+			"end": "À",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.paren.open"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.paren.close"
+				}
+			},
+			"name": "expression.group",
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "(Ã([aA]+))"
+				},
+				{
+					"name": "keyword.operator",
+					"match": "(å([aA]+))"
+				}
+			]
+		},
+		"entity": {
+			"patterns": [
+				{
+					"name": "entity.name.class",
+					"match": "ã([aA]+)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double",
+			"begin": "Ä",
+			"end": "Ä"
+		},
+		"variable": {
+			"name": "variable",
+			"match": "ä([aA]*)"
+		},
+		"constant": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "(?<=[ ÁÀáàâ])((([aA]*)Â([aA]+))|([aA]+))"
+				},
+				{
+					"name": "constant.language",
+					"match": "Å([aA]+)"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.block",
+					"begin": "Ⓐ",
+					"end": "Ⓐ"
+				},
+				{
+					"name": "comment.line",
+					"begin": "ⓐ",
+					"end": "\n"
+				}
+			]
+		}
+	},
+	"scopeName": "A.aaa"
+}

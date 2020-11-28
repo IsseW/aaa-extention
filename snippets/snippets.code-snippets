@@ -1,0 +1,12 @@
+{
+    "cb": {
+        "prefix": "cb",
+        "description": "Comment block",
+        "body": "Ⓐ"
+    },
+    "cl": {
+        "prefix": "cl",
+        "description": "Comment line",
+        "body": "ⓐ"
+    }
+}

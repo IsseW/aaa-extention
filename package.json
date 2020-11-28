@@ -1,0 +1,41 @@
+{
+    "name": "aaa",
+    "displayName": "aaa",
+    "description": "aaa language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "aaa",
+                "aliases": [
+                    "aaa",
+                    "AAA"
+                ],
+                "extensions": [
+                    "aaa"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "aaa",
+                "scopeName": "A.aaa",
+                "path": "./syntaxes/aaa.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "aaa",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
